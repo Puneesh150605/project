@@ -3,6 +3,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Expose gsap globally for Blade templates
+window.gsap = gsap;
+window.ScrollTrigger = ScrollTrigger;
+
 document.addEventListener("DOMContentLoaded", (event) => {
     // General Reveal Animation
     const reveals = document.querySelectorAll(".gsap-reveal");
